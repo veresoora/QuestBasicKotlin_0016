@@ -9,3 +9,8 @@ data class DataClass(
     val id: Int,
     var email: String
 )
+
+fun main() {
+    val data = DataClass(1, "nadia@gmail.com")
+    println(data)
+}
