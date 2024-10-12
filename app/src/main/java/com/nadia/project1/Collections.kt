@@ -63,3 +63,44 @@ fun ContohSet() {
     val shapesLocked: Set<String> = shape
     println(shapesLocked)
 }
+
+// Map adalah kumpulan data yang memiliki pasangan key dan value
+// Map bersifat unordered, artinya data yang dimasukan tidak memiliki posisi tertentu
+// Map bersifat mutable dan read only, artinya data yang dimasukan dapat diubah dan tidak dapat diubah
+// Map Read-Only menggunakan mapOf
+// Map Mutable menggunakan mutableMapOf
+
+fun ContohMap() {
+
+    println()
+    println("=== Map ===")
+    // Map Read-Only
+    val readOnlyShape: Map<String, Int> = mapOf("Circle" to 1, "Square" to 2, "Triangle" to 3)
+    println(readOnlyShape)
+
+    // Map Mutable
+    val shape: MutableMap<String, Int> = mutableMapOf("Circle" to 1, "Square" to 2, "Triangle" to 3)
+    println(shape)
+
+    // Menambahkan data ke map mutable
+    shape["Rectangle"] = 4
+    println(shape)
+
+    // Menghapus data dari map mutable
+    shape.remove("Circle")
+    println(shape)
+
+    // Mengubah data dari map mutable
+    shape["Square"] = 5
+    println(shape)
+
+    // Map Read-Only
+    val shapesLocked: Map<String, Int> = shape
+    println(shapesLocked)
+}
+
+fun main() {
+    ContohList()
+    ContohSet()
+    ContohMap()
+}
